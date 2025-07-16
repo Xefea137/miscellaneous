@@ -1,11 +1,20 @@
 import pandas as pd
+import os
 
-NAMES = ["BLUE", "BLACK"]
+os.chdir(os.path.dirname(__file__))
 
-df = pd.read_excel("data.xlsx")
-df = df.fillna(0)
-df[['M', 'S', 'R']] = df[['M', 'S', 'R']].astype(int)
+def filter_names(input_file, output_file, names, columns):
+  if "NAME" not in columns:
+    columns.insert(0, "NAME")
 
-filtered_df = df[df["NAME"].isin(NAMES)]
+  df = pd.read_excel(input_file)
+  df = df.fillna(0)
+  df = df[columns]
+  filtered_df = df[df["NAME"].isin(names)]
+  filtered_df.to_excel(output_file, index=False)
 
-filtered_df.to_excel("output.xlsx", index=False)
+input_file = "data.xlsx"
+output_file = "output.xlsx"
+names = ["BLUE", "BLACK"]
+columns = ["M", "CODE"]
+filter_names(input_file, output_file, names, columns)
