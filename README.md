@@ -6,14 +6,21 @@ A collection of Python scripts created during my learning and experimentation wi
 
 ## Folders & Scripts
 
-### `swap_two_numbers_without_temp/`
+### `swap-two-numbers-without-temp/`
 A simple script to swap two numbers without using a temporary variable, using arithmetic operations.
 
 ---
 
-### `name_filter_excel/`
+### `name-filter-excel/`
 Reads an Excel file (`file_name.xlsx`) and filters names.  
 The filtered results are saved to `output.xlsx`.
+
+---
+
+### `compare-text-files/`
+
+Compares two text files line by line and prints the differences along with the line number.
+If both files are identical, it reports that no differences were found.
 
 ---
 
