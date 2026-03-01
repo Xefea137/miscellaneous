@@ -18,8 +18,7 @@ The filtered results are saved to `output.xlsx`.
 ---
 
 ### `compare-text-files/`
-
-Compares two text files line by line and prints the differences along with the line number.
+Compares two text files line by line using a simple tkinter GUI and displays the differences along with the line numbers.  
 If both files are identical, it reports that no differences were found.
 
 ---
